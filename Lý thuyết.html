@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+</head>
+<body>
+    <script>
+    //     <!-- \
+    // Array: lưu trữ tập hợp phần tử (element khác nhau) lại với nhau
+    // array: kiểu dữ liệu phức tạp
+    // -giá trị lưu ở vùng nhớ HEAP
+    // -Kiểu tham chiếu
+    // 1 cách tạo mảng
+    //    -mảng chứa các phần tử ngăn cách với nhau bởi dấu phẩy
+    //    -mảng có thể chứa nhiều kiểu dữ liệu khác nhau
+    // 2 các thuộc tính riêng của mảng
+    // index: là chỉ mục các phần tử trong mảng
+    // chỉ mục của mảng được đánh giá bắt đầu từ 0
+    // length: độ dài của mảng
+    // 3 typeof của array là object
+    //   kiểm tra có phải là mảng hay ko thì dùng Array.isArray()
+    // 4  CRUD với mảng
+    //   -C:Create : thêm mới phần tử trong mảng
+    //      +dùng push (): phương thức thêm phần tử vào vị trí cuối cùng của mảng
+    //      +unshift ():phương thức thêm phần tử vào vị trí đầu tiên của mảng
+    //      (vị trí,số phần tử muốn xoa,thêm)
+    //   -R:Read   : đọc hay duyệt các phần tử trong mảng
+    //       +for  : thường 
+    //       +for in : in ra chỉ mục index của mảng
+    //       +for of : in ra giá trị các phần tử trong mảng
+
+    //   -U:Update : cập nhật phần tử trong mảng
+    //       update : trực tiếp
+    //   -D:Delete : xóa phần tử trong mảng
+    //      +pop()  :xóa phần tử cuối cùng trong mảng
+    //      +shift(): xóa phần tử đầu tiên của mảng
+    //      +splice():
+    //      **********************
+    //      các phương thức làm việc với mảng
+    //      1.slide
+    //         -cắt sao chép ra 1 mảng mớira
+    //      2.sort
+    //         -sắp xếp các phần tử trong mảng theo bảng mã asci(mã bảng chũ cái)
+    //      3.reverse(): đảo ngược mảng
+    //      4.split  (): cắt chuỗi thành mảng
+    //      5.join()   : gộp các phần tử trong mảng thành chuỗi
+    //      6.toString : mảng thành chuôi (khác nhau với join là chuyển số thành chuỗi)
+    //      7. indexOf(): kiểm tra phần tử có trong mảng hay không nếu không có trả về vị trí tìm thấy đầu tiên
+    //         khoong có trả về -1
+    //     8.includes : tìm kiếm phần tử trả về true false
+    //     9.toUpperCase(): chuyển thành chữ hoa.
+    //     10.toLowerCase(): chuyển thành chữ thường.
+    //     11.charAt()
+    //     12.map()
+    //     13.reduce()
+    //     14.filter()
+    //     15.forEach()
+    //     16.find()
+    //     17.findIndex()
+    //     18.every()
+    //     19.some()
+    //     20.fill()
+    //     21.concat
+    //     22.endWidth()
+    //     23.starWidth()
+
+    // -->
+
+//     let text="hưng béo quá";
+//     let result=text.split(" ");
+   
+//   for(let i = 0 ;i < result.length;i++){
+//     result[i]=result[i].slice(0,1) + result[i].charAt(1).toUpperCase() + result[i].slice(2);
+   
+//   }
+//   console.log(result.join(" "));
+
+let input = "hưng béo quá uf s";
+const words = input.split(" ");
+let result = "";
+for (const i in words) {
+  let word = words[i].split("");
+  for (const letterIndex in word) {
+    if (letterIndex == 0) {
+      word[letterIndex] = word[letterIndex].toUpperCase();
+    }
+  }
+  result += word.join("") + " ";
+}
+console.log(result);
+</script>
+    
+</body>
+</html>

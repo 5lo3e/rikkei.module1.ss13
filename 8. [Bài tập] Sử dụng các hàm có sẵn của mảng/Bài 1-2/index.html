@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>8</title>
+</head>
+
+<body>
+    <script>
+        // let myColor=["Lion", "Tiger", "Wolf", "Kangaroo"];
+        // console.log(myColor.toString());
+        // let number= +prompt("Nhập dãy số có ít nhất 2 số chẵn ");
+        var num = prompt();
+        var str = num.toString();
+        var result = [str[0]];
+
+        for (var x = 1; x < str.length; x++) {
+            if ((str[x - 1] % 2 === 0) && (str[x] % 2 === 0)) {
+                result.push('-', str[x]);
+                console.log(str[x]);   
+                console.log(x);                     
+            }
+            else {
+                result.push(str[x]);
+            }
+        }
+        console.log(result.join(''));
+    </script>
+
+</body>
+
+</html>

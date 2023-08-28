@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping cart</title>
+</head>
+
+<body>
+    <script>
+        const bakery = ["chocolate", "marshmallow", "cookies", "chips"];
+        const cart = [];
+        let count=1;
+
+        for (let i in bakery) {
+            ++i
+            console.log(`${i}` + ". " + bakery[i]);
+            --i
+        }
+        let buy = prompt("Nhập sản phẩm muốn mua");
+        if (bakery.indexOf(buy) === -1) {
+            console.log("We don’t have that item");
+
+        }
+        else {
+            if (cart.indexOf(buy) === -1) {
+                
+                cart.push([buy +", "+ count]);
+                for(let i=0;i<cart.length;i++){
+                console.log(cart[i]);
+                }
+            }
+            else{
+                let i=0;
+                cart.indexOf(buy)= i;
+                cart.splice(i,1,)
+            }
+        }
+    let end=prompt("Bạn có muốn tiếp tục hay ko");
+    let endCount=0;
+
+    </script>
+
+</body>
+
+</html>
